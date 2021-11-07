@@ -592,11 +592,14 @@ ion-icon:hover {
     .tran-x100 {
         transform: translateX(65%);
     }
-    .menu-item {
-        width: 100%;
-    }
     .footer-item {
         width: 100%;
         margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-item {
+        width: 100%;
     }
 }
