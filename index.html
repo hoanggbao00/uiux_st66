@@ -16,10 +16,10 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="header-logo col-sm-2 col-md-3 col-4 ">
+                <div class="header-logo col-2">
                     <a href="https://www.facebook.com/bittetbomy" target="_blank"><img src="./images/logo.png" alt=""></a>
                 </div>
-                <nav class="header-nav col-sm-10 col-md-9 col-8 ">
+                <nav class="header-nav col-lg-6 col-md-9">
                     <ul>
                         <li class="nav-item"><a href="#home">Home</a></li>
                         <li class="nav-item"><a href="#news">Điểm nhấn</a></li>
@@ -32,6 +32,29 @@
                         </a>
                     </div>
                 </nav>
+                <input style="display: none" type="checkbox" name="" id="side-bar">
+                <label for="side-bar" class="btn-side col-8 col-md-10">
+                    <ion-icon name="menu"></ion-icon>
+                </label>
+                <div class="side">
+                    <div class="side-title">
+                        <p><span>Steak</span> House 66</p>
+                        <label for="side-bar">
+                            <ion-icon name="close"></ion-icon>
+                        </label>
+                    </div>
+                    <ul>
+                        <li class="nav-item"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#news">Điểm nhấn</a></li>
+                        <li class="nav-item"><a href="#menu">Thực đơn</a></li>
+                        <li class="nav-item"><a href="#footer">Liên hệ</a></li>
+                    </ul>
+                    <a id="facebook" href="https://www.facebook.com/bittetbomy">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        Facebook
+                    </a>
+                </div>
+                <label for="side-bar" class="overlay"></label>
             </div>
         </div>
     </header>

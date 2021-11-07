@@ -1,6 +1,7 @@
 /* --------
  font
  ----------*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fruktur&display=swap");
@@ -8,15 +9,16 @@
 /* ----------
  variables
 ----------*/
+
 :root {
     --primary: #265c5e;
     --primary-blur: rgb(27, 65, 66);
     --secondary: #ff9600;
     --cursive-font: "Dancing Script", cursive;
     --poppins-font: "Poppins", sans-serif;
-
     scroll-behavior: smooth;
 }
+
 
 /* ------------------
  global settings 
@@ -77,7 +79,9 @@ section {
     overflow: hidden;
 }
 
+
 /* ele */
+
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -112,10 +116,7 @@ section {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 250px 250px 250px;
-    grid-template-areas:
-        "h1 h2"
-        "h1 h3"
-        "h1 h4";
+    grid-template-areas: "h1 h2" "h1 h3" "h1 h4";
 }
 
 .tran-x-100 {
@@ -141,17 +142,20 @@ section {
     border-radius: 4px;
     background-color: var(--primary);
 }
+
 #up {
     color: var(--secondary);
 }
 
 #to-the-top:hover,
-#to-the-top:hover > #up {
+#to-the-top:hover>#up {
     background-color: var(--secondary);
     color: var(--primary);
 }
 
+
 /* animation keyframe*/
+
 @keyframes zoomInOut {
     0%,
     100% {
@@ -162,9 +166,11 @@ section {
     }
 }
 
+
 /* ----------
  header
  ------------*/
+
 .header {
     /* background-color: #333; */
     position: fixed;
@@ -197,9 +203,112 @@ section {
     margin: auto;
 }
 
+.header .row {
+    justify-content: space-between;
+}
+
 .header .header-logo img {
     width: 70px;
     height: 70px;
+}
+
+.btn-side {
+    display: none;
+    text-align: right;
+    line-height: 16px;
+}
+
+.btn-side ion-icon {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 320px;
+    background-color: var(--primary);
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+}
+
+#side-bar:checked~.side {
+    transform: translateX(0);
+}
+
+.side-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin-bottom: 20px;
+}
+
+.side-title p {
+    padding: 1rem;
+    padding-bottom: 0;
+    display: inline-block;
+    color: white;
+    font-family: var(--poppins-font);
+    font-weight: 500;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.side-title ion-icon {
+    color: white;
+    font-weight: 500;
+    font-size: 1.7rem;
+    padding: .5rem;
+    padding-bottom: 0;
+}
+
+.side-title span {
+    font-family: var(--cursive-font);
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.side ul {
+    display: block;
+    padding-left: 0;
+}
+
+.side .nav-item {
+    display: block;
+    width: 100%;
+    list-style: none;
+    padding: .5rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.side #facebook {
+    color: white;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .4;
+    transition: display 0.2s ease;
+}
+
+#side-bar:checked~.overlay {
+    display: block;
 }
 
 .icon-facebook {
@@ -213,8 +322,8 @@ section {
     padding-top: 1.5rem;
 }
 
-#facebook:hover > ion-icon {
-    color: var(--secondary);
+.header-nav {
+    display: block;
 }
 
 .header-nav ul li {
@@ -233,11 +342,16 @@ section {
     transition: color 0.3s ease;
 }
 
-.header-nav a:hover {
+.nav-item:hover a,
+#facebook:hover,
+#facebook:hover>ion-icon,
+ion-icon:hover {
     color: var(--secondary);
 }
 
+
 /* home section */
+
 .home-section {
     position: relative;
     overflow: hidden;
@@ -290,9 +404,11 @@ section {
     margin: 0 0 30px;
 }
 
+
 /* ---------
  news section 
  -------------*/
+
 .section-title {
     width: 100%;
     padding: 0 1rem;
@@ -318,12 +434,15 @@ section {
 .big-image {
     grid-area: h1;
 }
+
 .small-image:nth-child(2) {
     grid-area: h2;
 }
+
 .small-image:nth-child(3) {
     grid-area: h3;
 }
+
 .small-image:last-child {
     grid-area: h4;
 }
@@ -335,7 +454,9 @@ section {
     object-fit: cover;
 }
 
+
 /* menu section */
+
 .menu-section {
     /* background-color: #333; */
     padding-bottom: 60px;
@@ -373,6 +494,7 @@ section {
 .menu-tab-content {
     display: none;
 }
+
 .menu-tab-content.active {
     display: flex;
 }
@@ -409,7 +531,9 @@ section {
     display: inline-block;
 }
 
+
 /* footer */
+
 .footer {
     padding-top: 80px;
     padding-bottom: 30px;
@@ -432,54 +556,45 @@ section {
     line-height: 30px;
 }
 
+
 /*---------
  responsive
  --------*/
 
-@media (max-width: 991px) {
-    .news-section.container,
-    .menu-section.container {
-        max-width: 790px;
-    }
-    .menu-item img {
-        max-width: 120px;
-        height: 120px;
+@media (min-width: 1024px) {
+    .header-nav {
+        width: 75%;
     }
     .header-nav li:not(:first-child) {
-        margin-left: 1rem;
+        margin-left: 0;
     }
 }
 
-@media (max-width: 767px) {
-    .header-nav li:not(:first-child) {
-        margin-left: 0.5rem;
+@media (max-width: 1023px) {
+    .header-nav {
+        display: none;
     }
-    .header-nav ul li {
-        padding: 1rem 0;
+    .btn-side {
+        display: block;
     }
-    .header-nav ul {
-        padding-left: 0;
-    }
-
     .home-text {
         max-width: 100%;
     }
-
-    .news-section > .container,
-    .menu-section > .container {
+    .news-section>.container {
+        max-width: 90%;
+    }
+    .menu-section>.container {
         max-width: 700px;
     }
     .tran-x-100 {
-        transform: translateX(0);
+        transform: translateX(-65%);
     }
     .tran-x100 {
-        transform: translateX(0);
+        transform: translateX(65%);
     }
-
     .menu-item {
         width: 100%;
     }
-
     .footer-item {
         width: 100%;
         margin-bottom: 2rem;
