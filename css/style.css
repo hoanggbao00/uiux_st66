@@ -599,7 +599,19 @@ ion-icon:hover {
 }
 
 @media (max-width: 767px) {
+    .header .header-logo.col-2 {
+        width: 33.33333333%
+    }
     .menu-item {
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .news-section>.container {
+        max-height: 50%;
+    }
+    .grid {
+        grid-template-rows: 150px 150px 150px;
     }
 }
